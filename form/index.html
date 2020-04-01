@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css" />
+        <script>
+            let n = 1;
+            function addInput() {
+                var phones = document.getElementById('phones');
+                var input = document.createElement('input');
+                input.setAttribute('class', 'inputs-main-class');
+                input.setAttribute('type', 'tel');
+                input.setAttribute('pattern', '8-[0-9]{3}-[0-9]{3}-[0-9]{4}');
+                input.setAttribute('placeholder', 'телефон ' + ++n);
+                phones.prepend(input);
+                var btnAddPhones = document.getElementById('btnAddPhones');
+                if (n >= 4) {
+                    btnAddPhones.remove()
+                }
+            }
+            class Person {
+                fullName = document.getElementById('fullname');
+                phone = document.getElementById('phone');
+                comment = document.getElementById('comment');
+
+                personFullName = "Sorokin N.Y."
+                personPhone = "8-987-456-01-10"
+                personComment = "Hello World!..."
+
+                loadInf() {
+                    fullName.value = this.personFullName;
+                    phone.value = this.personPhone;
+                    comment.value = this.personComment;
+                }
+            }
+            const person = new Person();
+        </script>
+    </head>
+    <body>
+        <div class = "main">
+            <form
+                id="form"
+                class="form">
+                <input
+                    id="fullName"
+                    class="inputs-main-class"
+                    type="text"
+                    placeholder="ФИО"
+                    value=""
+                />
+                <div
+                    id = "phones"
+                    class="phone-inputs"
+                >
+                    <input
+                        id="phone"
+                        class="inputs-main-class"
+                        type="tel"
+                        pattern="8-[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        placeholder="Tелефон 1"
+                    />
+                </div>
+            </form>
+            <div class="btns">
+                <button
+                    id="btnAddPhones"
+                    class="btn-add-phones"
+                    onclick="addInput()"
+                > + </button>
+            </div>
+            <div class="comment-form">
+                <textarea
+                    id="comment"
+                    class="textarea"
+                    type="text"
+                    placeholder="Комментарий"
+                    onchange=""
+                ></textarea>
+                <button
+                    class="btn-send"
+                    onclick="person.loadInf()"
+                > Отправить </button>
+            </div>
+        </div>
+    </body>
+</html>

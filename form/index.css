@@ -1,0 +1,57 @@
+:root {
+  --input-width: 200px;
+  --main-height-elms: 26px;
+  --main-margin: 2px;
+  --button-width: 82px;
+}
+
+.main {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: var(--input-width) auto;
+}
+
+.inputs-main-class {
+  height: var(--main-height-elms);
+  margin-bottom: var(--main-margin);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: var(--input-width);
+  margin-bottom: 15px;
+}
+
+.phone-inputs {
+  display: grid;
+  grid-template-columns: var(--input-width);
+}
+
+.btns {
+  display: grid;
+  grid-template-columns: var(--button-width);
+  margin-left: var(--main-margin);
+  height: auto;
+}
+
+.btn-add-phones {
+  margin-top: 28px;
+  height: var(--main-height-elms);
+  width: 26px;
+}
+
+.comment-form {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.textarea {
+  height: 120px;
+  width: var(--input-width);
+}
+
+.btn-send {
+  align-self: flex-end;
+  margin-left: var(--main-margin);
+  height: var(--main-height-elms);
+}

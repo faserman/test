@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css" />
+        <script>
+            window.onload = function() {
+                var str = '';
+                for (var i = 0; i < 20; i++) {
+                    for (var j = 0; j < 80; j++) {
+                        str += 'O';
+                    }
+                    str += '\n';
+                };
+            var main = document.getElementById('main');
+            var whiteDiv = document.createElement('div');
+            whiteDiv.classList.add('whiteDiv');
+            whiteDiv.innerHTML = str;
+            var blueDiv = document.createElement('div');
+            blueDiv.classList.add('blueDiv');
+            blueDiv.innerHTML = str;
+            var redDiv = document.createElement('div');
+            redDiv.classList.add('redDiv');
+            redDiv.innerHTML = str;
+            main.appendChild(whiteDiv);
+            main.appendChild(blueDiv);
+            main.appendChild(redDiv);
+            };
+        </script>
+    </head>
+    <body class = 'background'>
+        <div id = "main"/>
+    </body>
+</html>
